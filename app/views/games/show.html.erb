@@ -33,13 +33,14 @@
         </tr>
       </thead>
       <tbody>
-        <% @game.biddings.each do |bidding| %>
+        <% @game.biddings.reverse.each do |bidding| %>
           <tr>
             <td>1</td>
             <td><%= bidding.bid_points %></td>
             <td><%= bidding.bid_color %></td>
             <td><%= bidding.bid_team %></td>
             <td><%= bidding.countered %></td>
+            <td><%= bidding.belote %></td>
             <td><%= bidding.points %></td>
             <td>Oui</td>
           </tr>
