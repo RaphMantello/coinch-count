@@ -6,6 +6,8 @@ class GamesController < ApplicationController
   end
 
   def show
+    @game.score_1 = 0
+    @game.score_2 = 0
   end
 
   def new
@@ -37,7 +39,7 @@ class GamesController < ApplicationController
   private
 
   def game_params
-    params.require(:game).permit(:name, :created_at)
+    params.require(:game).permit(:name, :score_1, :score_2, :created_at)
   end
 
   def set_game
