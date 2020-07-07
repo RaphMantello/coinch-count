@@ -1,3 +1,5 @@
 <h1>THIS IS HOMEPAGE</h1>
 
-<%= link_to "New game", new_game_path %>
+<%= simple_form_for @game do |g| %>
+  <%= g.button :submit, 'New game' %>
+<% end %>

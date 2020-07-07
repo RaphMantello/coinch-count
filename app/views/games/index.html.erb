@@ -3,15 +3,16 @@
     <table class="table">
       <thead>
         <tr>
-          <td>GAMES</td>
+          <td colspan="4">GAMES</td>
         </tr>
       </thead>
       <tbody>
         <%= @games.each do |g| %>
           <tr>
-            <td>
-              <%= g.name %>
-            </td>
+            <td><%= g.name %></td>
+            <td><%= g.score_1 %></td>
+            <td><%= g.score_2 %></td>
+            <td><%= g.created_at %></td>
           </tr>
         <% end %>
       </tbody>

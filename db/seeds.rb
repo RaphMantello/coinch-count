@@ -6,5 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-games = Game.create([{name: 'Game 1', score_1: 0, score_2: 0}, {name: 'Game 2'}])
+puts "Cleaning the DB..."
 
+Game.destroy_all
+
+puts "Creating new games..."
+
+games = Game.create([{name: 'Game 1'}, {name: 'Game 2'}])
+
+puts "Games created !"
