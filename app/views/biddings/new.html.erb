@@ -1,0 +1,9 @@
+<%= simple_form_for [ @game, @bidding ] do |b| %>
+  <%= b.input :bid_points %>
+  <%= b.input :bid_color %>
+  <%= b.input :bid_team %>
+  <%= b.input :countered %>
+  <%= b.input :points %>
+
+  <%= b.submit 'Fin de manche' %>
+<% end %>
