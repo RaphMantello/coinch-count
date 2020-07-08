@@ -1,5 +1,6 @@
 class BiddingsController < ApplicationController
   before_action :set_game, only: [:new, :create, :edit, :update]
+  before_action :set_bidding, only: [:edit, :update]
 
   def new
     @bidding = Bidding.new
@@ -18,12 +19,10 @@ class BiddingsController < ApplicationController
   end
 
   def edit
-    @bidding = @game.biddings.find(params[:id])
     bid_options
   end
 
   def update
-    @bidding = @game.biddings.find(params[:id])
     @bidding.update(bidding_params)
 
     redirect_to game_path(@game)
@@ -37,6 +36,10 @@ class BiddingsController < ApplicationController
 
   def set_game
     @game = Game.find(params[:game_id])
+  end
+
+  def set_bidding
+    @bidding = @game.biddings.find(params[:id])
   end
 
   def bid_options
