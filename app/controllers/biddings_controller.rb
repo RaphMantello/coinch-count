@@ -12,6 +12,7 @@ class BiddingsController < ApplicationController
     @bidding.game = @game
 
     if @bidding.save
+      bid_success
       redirect_to game_path(@game)
     else
       render :new
@@ -29,6 +30,10 @@ class BiddingsController < ApplicationController
   end
 
   private
+
+  def bid_success
+
+  end
 
   def bid_options
     @bid_points_options = [80, 90, 100, 110, 120, 130, 140, 150, 160, 260, 500]
