@@ -7,6 +7,7 @@ class GamesController < ApplicationController
 
   def show
     game_count
+    game_winner
   end
 
   def new
@@ -53,6 +54,18 @@ class GamesController < ApplicationController
     end
     @game.biddings.where('bid_team = 2').each do |b|
       @game.score_2 = @game.score_2 + b.points
+    end
+    @game.save
+  end
+
+  def game_winner
+    @winner = ""
+    if @game.score_1 >= 1000 || @game.score_2 >= 1000
+      if @game.score_1 < @game.score_2
+        @winner = 2
+      else
+        @winner = 1
+      end
     end
   end
 end

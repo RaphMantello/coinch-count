@@ -1,11 +1,11 @@
 <div class="container full-height">
   <div class="abs-center">
-    <h2>Game #<%= @game.id %></h2>
+    <h2>Partie #<%= @game.id %></h2>
     <table class="table">
       <thead>
         <tr>
-          <th>TEAM 1</th>
-          <th>TEAM 2</th>
+          <th>ÉQUIPE 1</th>
+          <th>ÉQUIPE 2</th>
         </tr>
       </thead>
       <tbody>
@@ -16,7 +16,12 @@
       </tbody>
     </table>
 
-    <%= link_to 'New bidding', new_game_bidding_path(@game)  %>
+      <% if @game.score_1 < 1000 && @game.score_2 < 1000 %>
+        <%= link_to 'Nouvelle manche', new_game_bidding_path(@game) %>
+      <% else %>
+        <h2>L'équipe <%= @winner %> remporte la partie !</h2>
+        <%= link_to 'Retour home', root_path %>
+      <% end %>
 
     <%= render 'games/bidding_table' %>
 

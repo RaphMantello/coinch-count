@@ -9,6 +9,7 @@
           <th>Belote</th>
           <th>Points</th>
           <th>Faite/Chutée</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -23,10 +24,11 @@
             <td><%= bidding.belote %></td>
             <td><%= bidding.points %></td>
             <% if bidding.bid_points <= bidding.points %>
-              <td>Yes</td>
+              <td>Oui</td>
             <% else %>
-              <td>No</td>
+              <td>Non</td>
             <% end %>
+            <td><%= link_to 'modifier', edit_game_bidding_path(@game) %></td>
           </tr>
           <% @bid_number = @bid_number - 1 %>
         <% end %>
