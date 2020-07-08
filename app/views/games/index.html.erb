@@ -3,7 +3,7 @@
     <table class="table">
       <thead>
         <tr>
-          <td colspan="4">GAMES</td>
+          <td colspan="5">GAMES</td>
         </tr>
       </thead>
       <tbody>
@@ -13,6 +13,7 @@
             <td><%= g.score_1 %></td>
             <td><%= g.score_2 %></td>
             <td><%= g.created_at %></td>
+            <td><%= link_to 'see game', game_path(g) %></td>
           </tr>
         <% end %>
       </tbody>

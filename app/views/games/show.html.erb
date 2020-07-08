@@ -1,7 +1,6 @@
 <div class="container full-height">
   <div class="abs-center">
-    <%= @game.name %>
-    <%= @game.id %>
+    <h2>Game #<%= @game.id %></h2>
     <table class="table">
       <thead>
         <tr>
@@ -33,10 +32,10 @@
         </tr>
       </thead>
       <tbody>
-        <% @bid_count = @game.biddings.size %>
+        <% @bid_number = @game.biddings.size %>
         <% @game.biddings.reverse.each do |bidding| %>
           <tr>
-            <td><%= @bid_count %></td>
+            <td><%= @bid_number %></td>
             <td><%= bidding.bid_points %></td>
             <td><%= bidding.bid_color %></td>
             <td><%= bidding.bid_team %></td>
@@ -49,7 +48,7 @@
               <td>No</td>
             <% end %>
           </tr>
-          <% @bid_count = @bid_count - 1 %>
+          <% @bid_number = @bid_number - 1 %>
         <% end %>
       </tbody>
     </table>

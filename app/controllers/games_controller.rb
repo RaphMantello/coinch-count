@@ -6,6 +6,7 @@ class GamesController < ApplicationController
   end
 
   def show
+    game_count
   end
 
   def new
@@ -42,5 +43,16 @@ class GamesController < ApplicationController
 
   def set_game
     @game = Game.find(params[:id])
+  end
+
+  def game_count
+    @game.score_1 = 0
+    @game.score_2 = 0
+    @game.biddings.where('bid_team = 1').each do |b|
+      @game.score_1 = @game.score_1 + b.points
+    end
+    @game.biddings.where('bid_team = 2').each do |b|
+      @game.score_2 = @game.score_2 + b.points
+    end
   end
 end
