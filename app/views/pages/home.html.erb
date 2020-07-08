@@ -1,7 +1,9 @@
-<h1>THIS IS HOMEPAGE</h1>
+<div class="full-height">
+  <h1>THIS IS HOMEPAGE</h1>
 
-<%= simple_form_for @game do |g| %>
-  <%= g.button :submit, 'New game' %>
-<% end %>
+  <%= simple_form_for @game do |g| %>
+    <%= g.button :submit, 'New game' %>
+  <% end %>
 
-<%= link_to 'List of all the games', games_path %>
+  <%= link_to 'List of all the games', games_path %>
+</div>

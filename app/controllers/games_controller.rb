@@ -6,7 +6,7 @@ class GamesController < ApplicationController
   end
 
   def show
-    game_count
+    game_scores
     game_winner
   end
 
@@ -46,14 +46,23 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
   end
 
-  def game_count
+  def game_scores
     @game.score_1 = 0
     @game.score_2 = 0
-    @game.biddings.where('bid_team = 1').each do |b|
-      @game.score_1 = @game.score_1 + b.points
+
+    @game.biddings.where(bid_team: 1).each do |b|
+      if b.bid_points < b.points
+        @game.score_1 = @game.score_1 + b.bid_points
+      else
+        @game.score_2 = @game.score_2 + 160
+      end
     end
-    @game.biddings.where('bid_team = 2').each do |b|
-      @game.score_2 = @game.score_2 + b.points
+    @game.biddings.where(bid_team: 2).each do |b|
+      if b.bid_points < b.points
+        @game.score_2 = @game.score_2 + b.points
+      else
+        @game.score_1 = @game.score_1 + 160
+      end
     end
     @game.save
   end

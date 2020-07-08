@@ -30,6 +30,14 @@ class BiddingsController < ApplicationController
 
   private
 
+  def bid_options
+    @bid_points_options = [80, 90, 100, 110, 120, 130, 140, 150, 160, 260, 500]
+    @bid_color_options = ['Coeur', 'Pique', 'Carreau', 'Trèfle']
+    @bid_team_options = [1, 2]
+    @countered_options = ['Non', 'Contrée', 'Surcontrée']
+    @belote_options = ['Oui', 'Non']
+  end
+
   def bidding_params
     params.require(:bidding).permit(:bid_points, :bid_color, :bid_team, :belote, :countered, :points)
   end
@@ -40,13 +48,5 @@ class BiddingsController < ApplicationController
 
   def set_bidding
     @bidding = @game.biddings.find(params[:id])
-  end
-
-  def bid_options
-    @bid_points_options = [80, 90, 100, 110, 120, 130, 140, 150, 160, 260, 500]
-    @bid_color_options = ['Coeur', 'Pique', 'Carreau', 'Trèfle']
-    @bid_team_options = [1, 2]
-    @countered_options = ['Non', 'Contrée', 'Surcontrée']
-    @belote_options = ['Oui', 'Non']
   end
 end
