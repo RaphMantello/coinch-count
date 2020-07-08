@@ -1,0 +1,34 @@
+<table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Annonce</th>
+          <th>Couleur</th>
+          <th>Équipe</th>
+          <th>Contrée/Surcontrée</th>
+          <th>Belote</th>
+          <th>Points</th>
+          <th>Faite/Chutée</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @bid_number = @game.biddings.size %>
+        <% @game.biddings.reverse.each do |bidding| %>
+          <tr>
+            <td><%= @bid_number %></td>
+            <td><%= bidding.bid_points %></td>
+            <td><%= bidding.bid_color %></td>
+            <td><%= bidding.bid_team %></td>
+            <td><%= bidding.countered %></td>
+            <td><%= bidding.belote %></td>
+            <td><%= bidding.points %></td>
+            <% if bidding.bid_points <= bidding.points %>
+              <td>Yes</td>
+            <% else %>
+              <td>No</td>
+            <% end %>
+          </tr>
+          <% @bid_number = @bid_number - 1 %>
+        <% end %>
+      </tbody>
+    </table>
