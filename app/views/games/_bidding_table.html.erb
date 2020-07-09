@@ -5,34 +5,25 @@
       <th>Annonce</th>
       <th>Couleur</th>
       <th>Équipe</th>
-      <th>Contrée/Surcontrée</th>
-      <th>Belote</th>
+      <th>Contrée</th>
       <th>Points</th>
       <th>Faite/Chutée</th>
       <th></th>
     </tr>
   </thead>
   <tbody>
-    <% @bid_number = @game.biddings.size %>
     <% @game.biddings.reverse.each do |b| %>
       <tr>
-        <td><%= @bid_number %></td>
+        <td><%= @biddings_size %></td>
         <td><%= b.bid_points %></td>
         <td><%= b.bid_color %></td>
         <td><%= b.bid_team %></td>
         <td><%= b.countered %></td>
-        <td><%= b.belote %></td>
         <td><%= b.points %></td>
-        <% if b.bid_points <= b.points %>
-          <td>Oui</td>
-        <% else %>
-          <td>Non</td>
-        <% end %>
+        <td><%= b.success ? 'Faite' : 'Chutée' %></td>
         <td><%= link_to 'modifier', edit_game_bidding_path(@game) %></td>
       </tr>
-      <% @bid_number = @bid_number - 1 %>
+      <% @biddings_size = @biddings_size - 1 %>
     <% end %>
   </tbody>
 </table>
-
-<h2><%= @success %></h2>

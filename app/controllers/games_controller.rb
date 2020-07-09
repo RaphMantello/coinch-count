@@ -8,6 +8,7 @@ class GamesController < ApplicationController
   def show
     game_scores
     game_winner
+    biddings_size
   end
 
   def new
@@ -50,21 +51,57 @@ class GamesController < ApplicationController
     @game.score_1 = 0
     @game.score_2 = 0
 
-    @game.biddings.where(bid_team: 1).each do |b|
-      if b.bid_points < b.points
-        @game.score_1 = @game.score_1 + b.bid_points
+    @game.biddings.each do |b|
+      if b.bid_points <= b.points
+        capot?(b)
       else
-        @game.score_2 = @game.score_2 + 160
+        bid_score_failed(b, 160, 1)
       end
     end
-    @game.biddings.where(bid_team: 2).each do |b|
-      if b.bid_points < b.points
-        @game.score_2 = @game.score_2 + b.points
-      else
-        @game.score_1 = @game.score_1 + 160
-      end
-    end
+
     @game.save
+  end
+
+  def capot?(bidding)
+    if bidding.points == 250
+      capot_unannounced(bidding)
+    else
+      capot_and_not_capot(bidding)
+    end
+  end
+
+  def capot_unannounced(bidding)
+    countered?(bidding, 250)
+  end
+
+  def capot_and_not_capot(bidding)
+    countered?(bidding, bidding.bid_points)
+  end
+
+  def countered?(bidding, points)
+    if bidding.countered == 'Contrée'
+      bid_score(bidding, points, 2)
+    elsif bidding.countered == 'Surcontrée'
+      bid_score(bidding, points, 4)
+    else
+      bid_score(bidding, points, 1)
+    end
+  end
+
+  def bid_score(bidding, points, countered)
+    if bidding.bid_team == 1
+      @game.score_1 = @game.score_1 + (points * countered)
+    else
+      @game.score_2 = @game.score_2 + (points * countered)
+    end
+  end
+
+  def bid_score_failed(bidding, points, countered)
+    if bidding.bid_team == 1
+      @game.score_2 = @game.score_2 + (points * countered)
+    else
+      @game.score_1 = @game.score_1 + (points * countered)
+    end
   end
 
   def game_winner
@@ -76,5 +113,9 @@ class GamesController < ApplicationController
         @winner = 1
       end
     end
+  end
+
+  def biddings_size
+    @biddings_size = @game.biddings.size
   end
 end
