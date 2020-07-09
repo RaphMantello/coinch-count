@@ -13,6 +13,7 @@ class GamesController < ApplicationController
 
   def new
     @game = Game.new
+    @game.biddings.build
   end
 
   def create
@@ -71,7 +72,7 @@ class GamesController < ApplicationController
   end
 
   def capot_unannounced(bidding)
-    countered?(bidding, 250)
+    countered?(bidding, bidding.points)
   end
 
   def capot_and_not_capot(bidding)

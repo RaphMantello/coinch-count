@@ -3,7 +3,6 @@
     <tr>
       <th>#</th>
       <th>Annonce</th>
-      <th>Couleur</th>
       <th>Équipe</th>
       <th>Contrée</th>
       <th>Points</th>
@@ -16,12 +15,11 @@
       <tr>
         <td><%= @biddings_size %></td>
         <td><%= b.bid_points %></td>
-        <td><%= b.bid_color %></td>
         <td><%= b.bid_team %></td>
         <td><%= b.countered %></td>
         <td><%= b.points %></td>
         <td><%= b.success ? 'Faite' : 'Chutée' %></td>
-        <td><%= link_to 'modifier', edit_game_bidding_path(@game) %></td>
+        <td><%= link_to 'modifier', edit_game_bidding_path(@game, b) %></td>
       </tr>
       <% @biddings_size = @biddings_size - 1 %>
     <% end %>

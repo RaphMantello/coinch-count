@@ -1,1 +1,10 @@
-<%= render 'biddings/bidding_form' %>
+<div class="form-centered form-style-classic">
+  <%= simple_form_for [ @game, @bidding ] do |b| %>
+    <%= b.input :bid_points, collection: @bid_points_options %>
+    <%= b.input :bid_team, collection: @bid_team_options %>
+    <%= b.input :countered, collection: @countered_options %>
+    <%= b.input :points %>
+
+    <%= b.submit 'Fin de manche' %>
+  <% end %>
+</div>
