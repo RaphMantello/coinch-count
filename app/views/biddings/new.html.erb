@@ -1,10 +1,16 @@
 <div class="form-centered form-style-classic">
+  <div class="form-title">
+    <h4>Nouvelle annonce</h4>
+  </div>
   <%= simple_form_for [ @game, @bidding ] do |b| %>
-    <%= b.input :bid_points, collection: @bid_points_options %>
-    <%= b.input :bid_team, collection: @bid_team_options %>
-    <%= b.input :countered, collection: @countered_options %>
-    <%= b.input :points %>
+    <%= b.input :bid_points, collection: @bid_points_options, label: 'Points annoncés' %>
+    <%= b.input :bid_team, collection: @bid_team_options, label: 'Équipe preneuse' %>
+    <%= b.input :countered, collection: @countered_options, label: 'Contrée ?' %>
+    <%= b.input :points, label: 'Points effectués' %>
+    <p>Le score inscrit comprend les points marqués grâce à la belote</p>
 
-    <%= b.submit 'Fin de manche' %>
+    <div class="form-submit">
+      <%= b.submit 'Fin de manche', class: 'light-blue-btn' %>
+    </div>
   <% end %>
 </div>

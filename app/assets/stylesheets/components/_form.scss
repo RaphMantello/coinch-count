@@ -1,21 +1,40 @@
-// center the div in the middle of the screen
-// size the form to 50% vw
 .form-centered {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 25%;
+  width: 50%;
   min-width: 180px;
+  max-width: 300px;
 }
 
-// keep entry fiels format
-// change colors
-// center fields' label
 .form-style-classic {
-  border: ;
+  padding: 1.5rem;
+  border: 2px solid $dark-blue;
+  background-color: $light-gray;
+
+  p {
+    font-size: x-small;
+  }
 }
 
+.form-title {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid $dark-blue;
+  text-align: center;
 
-// border bg-color change-label placeholders? center_submit style-button
-// title centered
+  h4 {
+    margin-bottom: 1rem;
+  }
+}
+
+.form-submit {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid $dark-blue;
+}
+
+// style-button
+

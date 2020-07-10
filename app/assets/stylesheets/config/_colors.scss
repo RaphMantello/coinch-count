@@ -6,6 +6,7 @@ $dark-blue: rgba(43, 58, 103, 1);
 $rich-yellow: rgba(255, 186, 8, 1);
 $dark-pink: rgba(214, 87, 128, 1);
 $dark-red: rgba(82, 5, 10, 1);
+$light-gray: rgb(245,245,245);
 
 /* SCSS Gradient */
 $gradient-top: linear-gradient(0deg, #96adc8ff, #2b3a67ff, #ffba08ff, #d65780ff, #52050aff);
@@ -18,4 +19,3 @@ $gradient-top-left: linear-gradient(225deg, #96adc8ff, #2b3a67ff, #ffba08ff, #d6
 $gradient-bottom-left: linear-gradient(315deg, #96adc8ff, #2b3a67ff, #ffba08ff, #d65780ff, #52050aff);
 $gradient-radial: radial-gradient(#96adc8ff, #2b3a67ff, #ffba08ff, #d65780ff, #52050aff);
 
-$light-gray: gray;
