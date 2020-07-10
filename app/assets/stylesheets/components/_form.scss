@@ -10,8 +10,8 @@
 
 .form-style-classic {
   padding: 1.5rem;
-  border: 2px solid $dark-blue;
-  background-color: $light-gray;
+  border: 2px solid $my-dark;
+  background-color: $my-light-gray;
 
   p {
     font-size: x-small;
@@ -21,7 +21,7 @@
 .form-title {
   width: 100%;
   margin-bottom: 1.5rem;
-  border-bottom: 1px solid $dark-blue;
+  border-bottom: 1px solid $my-dark;
   text-align: center;
 
   h4 {
@@ -33,7 +33,7 @@
   text-align: center;
   margin-top: 1.5rem;
   padding-top: 1.5rem;
-  border-top: 1px solid $dark-blue;
+  border-top: 1px solid $my-dark;
 }
 
 // style-button
