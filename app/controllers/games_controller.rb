@@ -41,7 +41,7 @@ class GamesController < ApplicationController
   private
 
   def game_params
-    params.permit(:name, :score_1, :score_2, :created_at)
+    params.require(:game).permit(:name, :score_1, :score_2, :created_at)
   end
 
   def set_game

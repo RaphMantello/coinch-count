@@ -41,7 +41,7 @@ class BiddingsController < ApplicationController
   end
 
   def set_bidding
-    @bidding = @game.biddings.build
+    @bidding = Bidding.find(params[:id])
   end
 
   def bid_success

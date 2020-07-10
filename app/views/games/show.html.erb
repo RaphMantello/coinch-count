@@ -1,6 +1,8 @@
 <div class="container full-height">
   <div class="abs-center">
     <h2>Partie #<%= @game.id %></h2>
+    <h3><%= @game.name %></h3>
+    <%= link_to 'modify', edit_game_path(@game) %>
     <table class="table">
       <thead>
         <tr>
