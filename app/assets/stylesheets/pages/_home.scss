@@ -2,6 +2,22 @@
   height: 100vh;
 }
 
+.home-colors {
+  background-color: $my-dark;
+
+  h1 {
+    color: $my-punchy;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  p {
+    color: $my-light-colored;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+}
+
 .abs-center {
   position: absolute;
   left: 50%;
@@ -12,3 +28,5 @@
   flex-direction: column;
   align-items: center;
 }
+
+

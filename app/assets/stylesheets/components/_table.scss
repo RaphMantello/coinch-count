@@ -1,23 +1,23 @@
 .table {
-    border: solid 1px #DDEEEE;
+    border: solid 1px $my-gray;
     border-collapse: collapse;
     border-spacing: 0;
-    font: normal 13px Arial, sans-serif;
+    font: $body-font;
     width: 75%;
     min-width: 470px;
 }
+
 .table thead tr {
-    background-color: #DDEFEF;
-    border: solid 1px #DDEEEE;
-    color: #336B6B;
+    background-color: $my-gray;
+    border: solid 1px $my-gray;
+    color: $my-light;
     padding: 10px;
     text-align: center;
-    text-shadow: 1px 1px 1px #fff;
 }
+
 .table tbody td {
-    border: solid 1px #DDEEEE;
-    color: #333;
+    border: solid 1px $my-light-colored;
+    color: $my-light-colored;
     padding: 10px;
-    text-shadow: 1px 1px 1px #fff;
     text-align: center;
 }

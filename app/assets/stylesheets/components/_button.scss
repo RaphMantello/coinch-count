@@ -1,5 +1,34 @@
-.light-blue-btn {
-  background-color: $my-light-colored;
-  border: 1px solid $my-dark;
-  ;
+.regular-btn {
+  background-color: $my-punchy;
+  border: 1px solid $my-light-colored;
+  display: inline-block;
+  color: $my-light;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 6px 16px;
+  margin: 0.25rem 0.75rem;
+  cursor: pointer;
+
+  &:hover {
+    color: $my-light-colored;
+    text-decoration: none;
+  }
+}
+
+.call-to-action-btn {
+
+}
+
+.transp-btn {
+  background-color: transparent;
+  color: $my-gray;
+  text-decoration: underline;
+  padding: 4px 8px;
+  margin: 0.25rem 0.75rem;
+  cursor: pointer;
+
+  &:hover {
+    color: $my-light-gray;
+    text-decoration: none;
+  }
 }
