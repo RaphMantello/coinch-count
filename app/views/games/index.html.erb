@@ -7,7 +7,7 @@
         </tr>
       </thead>
       <tbody>
-        <%= @games.reverse.each do |g| %>
+        <% @games.reverse.each do |g| %>
           <tr>
             <td><%= g.id %></td>
             <td><%= g.score_1 %></td>

@@ -14,7 +14,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @game.biddings.reverse.each do |b| %>
+    <% @game.biddings.order(:id).reverse.each do |b| %>
       <tr>
         <td><%= @biddings_size %></td>
         <td><%= b.bid_points %></td>
