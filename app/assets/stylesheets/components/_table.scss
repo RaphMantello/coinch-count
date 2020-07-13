@@ -7,17 +7,31 @@
     min-width: 470px;
 }
 
-.table thead tr {
+.table thead tr th {
     background-color: $my-gray;
-    border: solid 1px $my-gray;
+    border: solid 1px $my-punchy;
     color: $my-light;
-    padding: 10px;
+    padding: 0.5rem;
     text-align: center;
+
+    a {
+      color: $my-light;
+      text-decoration: underline;
+      font-size: larger;
+    }
 }
 
-.table tbody td {
-    border: solid 1px $my-light-colored;
-    color: $my-light-colored;
-    padding: 10px;
+.table tbody tr td {
+    background-color: $my-light-gray;
+    border: solid 1px $my-punchy;
+    color: $dark-blue;
+    padding: 0.25rem;
     text-align: center;
+    font-size: smaller;
+
+    a {
+      color: $dark-blue;
+      text-decoration: underline;
+      font-size: smaller;
+    }
 }
