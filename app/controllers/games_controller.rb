@@ -18,9 +18,12 @@ class GamesController < ApplicationController
 
   def create
     @game = Game.new(game_params)
-    @game.save
 
-    redirect_to game_path(@game)
+    if @game.save
+      redirect_to game_path(@game)
+    else
+      render :new
+    end
   end
 
   def edit
@@ -29,7 +32,7 @@ class GamesController < ApplicationController
   def update
     @game.update(game_params)
 
-    redirect_to game_path(@game)
+    redirect_to games_path
   end
 
   def destroy
@@ -41,7 +44,7 @@ class GamesController < ApplicationController
   private
 
   def game_params
-    params.require(:game).permit(:name, :score_1, :score_2, :created_at)
+    params.require(:game).permit(:goal_points, :score_1, :score_2, :created_at)
   end
 
   def set_game

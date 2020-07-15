@@ -31,12 +31,15 @@
   }
 }
 
+.form-inputs {
+// to be defined
+}
+
 .form-submit {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   margin-top: 1.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid $my-dark;
 }
-
-// style-button
-

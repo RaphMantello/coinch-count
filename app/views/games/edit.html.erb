@@ -1,10 +1,1 @@
-<div class="container full-height">
-  <div class="abs-center">
-    <div class="form">
-      <%= simple_form_for @game do |g| %>
-        <%= g.input :name %>
-        <%= g.submit %>
-      <% end %>
-    </div>
-  </div>
-</div>
+<%= render 'games/game_form' %>

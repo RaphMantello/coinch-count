@@ -6,3 +6,23 @@
 // Define fonts for body and headers
 $body-font: "Raleway", "sans-serif";
 $headers-font: "Kanit", "sans-serif";
+
+body {
+  font-size: 100%;
+
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.25em;
+  }
+  p {
+    font-size: 1em;
+  }
+  a {
+    font-size: 0.875em;
+  }
+}

@@ -3,8 +3,9 @@
   border: 1px solid $my-light-colored;
   display: inline-block;
   color: $my-light;
-  font-size: 16px;
+  font-size: 0.875em;
   text-decoration: none;
+  text-align: center;
   padding: 6px 16px;
   margin: 0.25rem 0.75rem;
   cursor: pointer;
@@ -22,7 +23,9 @@
 .transp-btn {
   background-color: transparent;
   color: $my-gray;
+  font-size: 0.875em;
   text-decoration: underline;
+  text-align: center;
   padding: 4px 8px;
   margin: 0.25rem 0.75rem;
   cursor: pointer;

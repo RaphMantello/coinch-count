@@ -18,9 +18,9 @@
         </tbody>
       </table>
 
-        <% if @game.score_1 >= 1000 || @game.score_2 >= 1000 %>
-          <h2>L'équipe <%= @winner %> remporte la partie !</h2>
-          <%= link_to 'Retour home', root_path %>
+        <% if @game.score_1 >= @game.goal_points || @game.score_2 >= @game.goal_points %>
+          <h3>L'équipe <%= @winner %> remporte la partie !</h3>
+          <%= link_to 'Retour home', root_path, class: 'regular-btn' %>
         <% end %>
 
       <%= render 'games/bidding_table' %>

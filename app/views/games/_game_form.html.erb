@@ -1,0 +1,16 @@
+<div class="container full-height">
+  <div class="abs-center">
+    <div class="form-style-classic">
+      <div class="form-title">
+        <h2>Nouvelle partie</h2>
+      </div>
+      <%= simple_form_for @game do |g| %>
+        <%= g.input :goal_points, label: 'Partie jouée en :', placeholder: '1000 points' %>
+
+        <div class="form-submit">
+          <%= g.submit 'Créer la partie', class: 'regular-btn' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

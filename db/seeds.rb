@@ -12,6 +12,6 @@ Game.destroy_all
 
 puts "Creating new games..."
 
-games = Game.create([{name: 'Game 1'}, {name: 'Game 2'}])
+games = Game.create([{goal_points: 1000}, {goal_points: 2000}])
 
 puts "Games created !"
