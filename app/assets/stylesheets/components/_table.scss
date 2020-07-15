@@ -4,14 +4,15 @@
     border-spacing: 0;
     font: $body-font;
     width: 75%;
-    min-width: 470px;
+    min-width: 250px;
 }
 
 .table thead tr th {
     background-color: $my-gray;
     border: solid 1px $my-punchy;
+    font-size: 0.4em;
     color: $my-light;
-    padding: 0.5rem;
+    padding: 0.25rem;
     text-align: center;
 
     a {
@@ -24,10 +25,10 @@
 .table tbody tr td {
     background-color: $my-light-gray;
     border: solid 1px $my-punchy;
-    color: $dark-blue;
     padding: 0.25rem;
+    font-size: 0.35em;
+    color: $dark-blue;
     text-align: center;
-    font-size: smaller;
 
     a {
       color: $dark-blue;
