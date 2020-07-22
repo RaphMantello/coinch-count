@@ -10,7 +10,7 @@
 .table thead tr th {
     background-color: $my-gray;
     border: solid 1px $my-punchy;
-    font-size: 0.4em;
+    font-size: clamp(50%, 1.5vw, 18px);
     color: $my-light;
     padding: 0.25rem;
     text-align: center;
@@ -26,7 +26,7 @@
     background-color: $my-light-gray;
     border: solid 1px $my-punchy;
     padding: 0.25rem;
-    font-size: 0.35em;
+    font-size: clamp(40%, 1.5vw, 14px);
     color: $dark-blue;
     text-align: center;
 

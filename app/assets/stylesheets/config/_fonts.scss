@@ -20,7 +20,7 @@ body {
     font-size: 1.25em;
   }
   p {
-    font-size: 1em;
+    font-size: clamp(50%, 2vw, 18px);
   }
   a {
     font-size: 0.875em;
