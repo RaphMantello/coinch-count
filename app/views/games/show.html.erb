@@ -24,6 +24,11 @@
           <h3>L'équipe <%= @winner %> remporte la partie !</h3>
           <%= link_to 'Retour home', root_path, class: 'regular-btn' %>
         <% end %>
+
+      <div class="regular-div">
+        <%= render 'games/card_order' %>
+      </div>
+
       <div class="regular-div">
         <%= render 'games/bidding_table' %>
       </div>

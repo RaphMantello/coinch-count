@@ -9,6 +9,7 @@ class GamesController < ApplicationController
     game_scores
     game_winner
     biddings_size
+    card_order
   end
 
   def new
@@ -122,4 +123,12 @@ class GamesController < ApplicationController
   def biddings_size
     @biddings_size = @game.biddings.size
   end
+
+  def card_order
+    @trumps_order = ['V', '9', 'As', '10', 'R', 'D', '8', '7']
+    @trumps_value = [20, 14, 11, 10, 4, 3, 0, 0]
+    @normal_order = ['As', '10', 'R', 'D', 'V', '9', '8', '7']
+    @normal_value = [11, 10, 4, 3, 2, 0, 0, 0]
+  end
 end
+

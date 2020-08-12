@@ -1,0 +1,47 @@
+<h3>Card order</h3>
+
+<div class="card-order-tables">
+  <table class="table">
+    <thead>
+      <tr>
+        <th colspan="9">Atout</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Cartes</td>
+        <% @trumps_order.each do |t| %>
+          <td><%= t %></td>
+        <% end %>
+      </tr>
+      <tr>
+        <td>Valeur</td>
+        <% @trumps_value.each do |t| %>
+          <td><%= t %></td>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th colspan="9">Normal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Cartes</td>
+        <% @normal_order.each do |n| %>
+          <td><%= n %></td>
+        <% end %>
+      </tr>
+      <tr>
+        <td>Valeur</td>
+        <% @normal_value.each do |n| %>
+          <td><%= n %></td>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+</div>
