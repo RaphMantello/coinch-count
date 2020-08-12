@@ -2,28 +2,31 @@
 <div class="home-colors">
   <div class="container full-height home-colors">
     <div class="abs-center">
-      <h2>SCORES</h2>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>ÉQUIPE 1</th>
-            <th>ÉQUIPE 2</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><%= @game.score_1 %></td>
-            <td><%= @game.score_2 %></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="regular-div">
+        <h2>SCORES</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ÉQUIPE 1</th>
+              <th>ÉQUIPE 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= @game.score_1 %></td>
+              <td><%= @game.score_2 %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
         <% if @game.score_1 >= @game.goal_points || @game.score_2 >= @game.goal_points %>
           <h3>L'équipe <%= @winner %> remporte la partie !</h3>
           <%= link_to 'Retour home', root_path, class: 'regular-btn' %>
         <% end %>
-
-      <%= render 'games/bidding_table' %>
+      <div class="regular-div">
+        <%= render 'games/bidding_table' %>
+      </div>
 
       <p>Pour le moment, ce compteur de points ne prend en charge que la méthode ne comptabilisant que les points annoncés.<br>
       En cas de chute, les 160 points de la partie vont à l'adversaire.<br>
