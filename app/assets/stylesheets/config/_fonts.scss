@@ -14,10 +14,10 @@ body {
     font-size: 3em;
   }
   h2 {
-    font-size: 2em;
+    font-size: clamp(15%, 5vw, 30px);
   }
   h3 {
-    font-size: 1.25em;
+    font-size: clamp(10%, 4vw, 24px);
   }
   p {
     font-size: clamp(10%, 1vw, 18px);

@@ -4,13 +4,12 @@
     border-spacing: 0;
     font: $body-font;
     width: 75%;
-    min-width: 250px;
 }
 
 .table thead tr th {
     background-color: $my-gray;
     border: solid 1px $my-punchy;
-    font-size: clamp(50%, 1.5vw, 18px);
+    font-size: clamp(10%, 1.75vw, 16px);
     color: $my-light;
     padding: 0.25rem;
     text-align: center;
@@ -25,8 +24,8 @@
 .table tbody tr td {
     background-color: $my-light-gray;
     border: solid 1px $my-punchy;
-    padding: 0.25rem;
-    font-size: clamp(40%, 1.5vw, 14px);
+    padding: 0.15rem;
+    font-size: clamp(10%, 1vw, 14px);
     color: $dark-blue;
     text-align: center;
 
@@ -40,10 +39,10 @@
 .card-order-tables {
   display: flex;
   justify-content: center;
+  width: 75%;
 
   table {
-    margin: 0 0.5rem;
-    width: 30%;
-    min-width:  auto;
+    margin: 0;
+    width: inherit;
   }
 }
