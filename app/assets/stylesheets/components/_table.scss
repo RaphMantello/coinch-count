@@ -25,7 +25,7 @@
     background-color: $my-light-gray;
     border: solid 1px $my-punchy;
     padding: 0.15rem;
-    font-size: clamp(10%, 1vw, 14px);
+    font-size: clamp(10%, 2vw, 14px);
     color: $dark-blue;
     text-align: center;
 
@@ -38,11 +38,21 @@
 
 .card-order-tables {
   display: flex;
-  justify-content: center;
+  grid-gap: 16px;
   width: 75%;
 
   table {
     margin: 0;
-    width: inherit;
+  }
+}
+
+@media(max-width: 768px) {
+  .card-order-tables {
+    grid-template-column: 1fr;
+    width: 100%;
+  }
+
+  .table {
+    width: 100%;
   }
 }
