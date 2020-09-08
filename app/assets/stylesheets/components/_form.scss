@@ -9,14 +9,23 @@
 }
 
 .form-style-classic {
-  padding: 1.5rem;
+  padding: 1rem;
   border: 2px solid $my-dark;
   background-color: $my-light-gray;
 
   p {
-    font-size: x-small;
+    font-size: clamp(10%, 2vw, 16px);
     color: $dark-blue;
     text-align: center;
+  }
+
+  label {
+    font-size: clamp(10%, 3vw, 16px);
+  }
+
+  select {
+    height: 1.75rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -42,4 +51,5 @@
   margin-top: 1.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid $my-dark;
+  font-size: clamp(10%, 2.75vw, 16px);
 }

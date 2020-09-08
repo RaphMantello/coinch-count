@@ -1,6 +1,6 @@
 <div class="form-centered form-style-classic">
   <div class="form-title">
-    <h4>Nouvelle annonce</h4>
+    <h3>Nouvelle annonce</h3>
   </div>
   <%= simple_form_for [ @game, @bidding ] do |b| %>
     <%= b.input :bid_points, collection: @bid_points_options, label: 'Points annoncés' %>
