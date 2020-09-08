@@ -12,6 +12,7 @@
   padding: 1rem;
   border: 2px solid $my-dark;
   background-color: $my-light-gray;
+  width: 40%;
 
   p {
     font-size: clamp(10%, 2vw, 16px);
@@ -19,13 +20,23 @@
     text-align: center;
   }
 
+  small {
+    font-size: clamp(10%, 2vw, 16px);
+  }
+
   label {
     font-size: clamp(10%, 3vw, 16px);
   }
 
-  select {
+  select, input {
     height: 1.75rem;
     font-size: 0.75rem;
+  }
+}
+
+@media(max-width: 768px) {
+  .form-style-classic {
+    width: 85%;
   }
 }
 
@@ -47,7 +58,7 @@
 .form-submit {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
   margin-top: 1.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid $my-dark;

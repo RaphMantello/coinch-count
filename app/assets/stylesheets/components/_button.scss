@@ -3,9 +3,10 @@
   border: 1px solid $my-light-colored;
   display: inline-block;
   color: $my-light;
-  font-size: 0.875em;
+  font-size: clamp(10%, 2.75vw, 14px);
   text-decoration: none;
   text-align: center;
+  max-width: 160px;
   padding: 6px 16px;
   margin: 0.25rem 0.75rem;
   cursor: pointer;

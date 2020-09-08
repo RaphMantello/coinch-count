@@ -11,18 +11,18 @@ body {
   font-size: 100%;
 
   h1 {
-    font-size: 3em;
+    font-size: clamp(10%, 8vw, 48px);
   }
   h2 {
-    font-size: clamp(15%, 5vw, 30px);
+    font-size: clamp(10%, 5vw, 30px);
   }
   h3 {
-    font-size: clamp(10%, 4vw, 24px);
+    font-size: clamp(10%, 3vw, 18px);
   }
   p {
-    font-size: clamp(10%, 1vw, 18px);
+    font-size: clamp(10%, 2vw, 12px);
   }
   a {
-    font-size: 0.875em;
+    font-size: clamp(10%, 2vw, 12px);
   }
 }
