@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root :to => 'home#index'
   mount ShopifyApp::Engine, at: '/'
   devise_for :users
-  root to: 'pages#home'
+  get 'pages/home'
   resources :games do
     resources :biddings, only: [:new, :create, :edit, :update]
   end
