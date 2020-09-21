@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root :to => 'home#index'
+  mount ShopifyApp::Engine, at: '/'
   devise_for :users
   root to: 'pages#home'
   resources :games do
